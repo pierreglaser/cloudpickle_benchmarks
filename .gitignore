@@ -27,3 +27,9 @@ docs/_build/
 .idea
 .vscode
 *.swp
+tags
+
+# asv generated folders
+results/
+env/
+html/
