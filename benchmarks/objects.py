@@ -23,6 +23,7 @@ def _func_with_closure_factory():
 
     def inner():
         return a
+
     return inner
 
 
@@ -30,6 +31,7 @@ def _func_using_submodules_factory():
     def inner():
         some_submodule = xml.etree.ElementTree  # use a submodule
         return some_submodule
+
     return inner
 
 

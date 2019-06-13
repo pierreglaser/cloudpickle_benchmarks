@@ -25,7 +25,7 @@ class CloudpickleTimeBenchmark:
         return pickle.loads(self._pickled_obj)
 
 
-class CloudpickleFileSizeBenchmark():
+class CloudpickleFileSizeBenchmark:
     __metaclass__ = ABCMeta
     number = 1
     repeat = 1
