@@ -7,6 +7,10 @@ from .objects import (
     large_dict,
     large_list,
     large_tuple,
+    classmethod_instance,
+    staticmethod_instance,
+    decorated_function,
+    toplevel_function,
 )
 
 BENCH_TYPES = {
@@ -26,6 +30,10 @@ OBJECTS = {
     "LargeList": large_list,
     "LargeDict": large_dict,
     "LargeTuple": large_tuple,
+    "ClassmethodInstancej": classmethod_instance,
+    "StaticmethodInstance": staticmethod_instance,
+    "DecoratedFunction": decorated_function,
+    "ToplevelFunction": toplevel_function,
 }
 
 ALL_BENCHMARKS = {}
@@ -34,7 +42,7 @@ ALL_BENCHMARKS = {}
 # Programatically create all benchmarks classes
 for bench_type, bench_base_class in BENCH_TYPES.items():
     for obj_name, obj in OBJECTS.items():
-        bench_name = "{}{}Benchmark".format(obj_name, bench_type)
+        bench_name = "{}{}Bench".format(obj_name, bench_type)
         bench_class = type(bench_name, (bench_base_class,), {"obj": obj})
         ALL_BENCHMARKS[bench_name] = bench_class
 
